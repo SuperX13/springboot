@@ -1,0 +1,13 @@
+person:
+  name: yyx
+  age: 18
+  happy: true
+  birthday: 2021/04/13
+  map: {k1: v1,k2: v2}
+  list:
+    - code
+    - basketball
+    - girl
+  dog:
+    name: myh
+    age: 3
