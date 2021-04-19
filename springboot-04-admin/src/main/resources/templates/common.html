@@ -1,21 +1,16 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <title>所有公共信息</title>
+<head th:fragment="commonhead">
     <!--common-->
     <link href="css/style.css" th:href="@{/css/style.css}" rel="stylesheet">
     <link href="css/style-responsive.css" th:href="@{/css/style-responsive.css}" rel="stylesheet">
 
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
     <script src="js/html5shiv.js" th:src="@{/js/html5shiv.js}"></script>
     <script src="js/respond.min.js" th:src="@{/js/respond.min.js}"></script>
-    <![endif]-->
 </head>
 <body>
 <!-- left side start-->
-<div class="left-side sticky-left-side">
+<div th:fragment="leftmenu" class="left-side sticky-left-side">
 
     <!--logo and iconic logo start-->
     <div class="logo">
@@ -157,7 +152,7 @@
 </div>
 <!-- left side end-->
 <!-- header section start-->
-<div class="header-section">
+<div th:fragment="headmenu" class="header-section">
 
     <!--toggle button start-->
     <a class="toggle-btn"><i class="fa fa-bars"></i></a>
@@ -360,6 +355,7 @@
 
 </div>
 <!-- header section end-->
+<div th:fragment="commonscript">
 <!-- Placed js at the end of the document so the pages load faster -->
 <script src="js/jquery-1.10.2.min.js" th:src="@{/js/jquery-1.10.2.min.js}"></script>
 <script src="js/jquery-ui-1.9.2.custom.min.js" th:src="@{/js/jquery-ui-1.9.2.custom.min.js}"></script>
@@ -367,5 +363,8 @@
 <script src="js/bootstrap.min.js" th:src="@{/js/bootstrap.min.js}"></script>
 <script src="js/modernizr.min.js" th:src="@{/js/modernizr.min.js}"></script>
 <script src="js/jquery.nicescroll.js" th:src="@{/js/jquery.nicescroll.js}"></script>
+    <!--common scripts for all pages-->
+    <script src="js/scripts.js" th:src="@{/js/scripts.js}"></script>
+</div>
 </body>
 </html>

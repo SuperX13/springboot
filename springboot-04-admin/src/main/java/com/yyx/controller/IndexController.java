@@ -27,14 +27,7 @@ public class IndexController {
         }
     }
     @GetMapping("/toIndex")
-    public String indexPage(HttpSession httpSession,Model model){
-        Object user = httpSession.getAttribute("user");
-        if (user !=null){
-            return "index";
-        }else {
-            model.addAttribute("msg","请先登录");
+    public String indexPage(){
             return "login";
-        }
-
     }
 }
